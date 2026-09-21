@@ -1,14 +1,20 @@
-SHOPPING LIST:
-1. 1x ESP32
-2. 1x MPU-6050 
-3. 2x MG90S Micro Servos 
-4. 2x Brushless Gimbal Motors 
-5. 2x AS5600 Magnetic Encoder 
-6. 2x Dual Brushless Motor Driver
-7. 1x 7.4V LiPo Battery 2S
-8. XL6009 Boost Converter Module DC to DC 3.0-30V to 5-35V
+## Shopping list
 
-LINKS TO PARTS (Amazon.de):
+| Part | Notes |
+|---|---|
+| ESP32 NodeMCU-32S | 30 pin |
+| 2x SimpleFOC Mini (DRV8313) | needs at least 8 V |
+| 2x gimbal motor | 7 pole pairs, ~35 Ω |
+| 2x AS5600 | encoders, address 0x36 (can't be changed) |
+| MPU-6050 | 0x68 |
+| 2x MG90S | leg servos |
+| 2x VL53L0X | distance sensors, not tested yet on the v2.0 |
+| 2S LiPo 2600 mAh | |
+| XL6009 boost | 10 V for the drivers |
+| Buck converter | 5 V for the ESP32 and servos |
+| 2x 220 µF cap | one on each driver, needed or the ESP32 resets |
+
+## LINKS TO PARTS (Amazon.de):
 1. https://www.amazon.de/-/en/gp/product/B0CQ52JFY4/ref=ox_sc_act_title_1?smid=A3JF3T1CRN0KMB&psc=1
 2. https://www.amazon.de/-/en/gp/product/B0C8WPNLFC/ref=ox_sc_act_title_2?smid=A31IWL9LS2WEHA&psc=1
 3. https://www.amazon.de/-/en/gp/product/B0H1M2SSRD/ref=ox_sc_act_title_3?smid=A6MBAEEOVQULG&psc=1
