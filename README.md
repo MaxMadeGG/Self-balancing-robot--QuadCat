@@ -14,7 +14,7 @@ Still work in progress. For now this is mostly the electronics and PCB, the rest
 | 2x AS5600 | encoders, address 0x36 (can't be changed) |
 | MPU-6050 | 0x68 |
 | 2x MG90S | leg servos |
-| 2x VL53L0X | distance sensors, not tested yet |
+| 2x VL53L0X | distance sensors, not tested yet on the v2.0 |
 | 2S LiPo 2600 mAh | |
 | XL6009 boost | 10 V for the drivers |
 | Buck converter | 5 V for the ESP32 and servos |
