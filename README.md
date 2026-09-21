@@ -1,8 +1,7 @@
 # Self-balancing robot- QuadCat
 
 Wheel-legged balancing robot. Two gimbal motors drive the wheels with my own FOC code, two servos move the legs so it can crouch, and an MPU-6050 is used for balancing.
-
-Still work in progress. For now this is mostly the electronics and PCB, the rest will come later.
+> **Status:** Work in progress. This repository currently contains the v2.0 custom PCB design, schematic and ownFOC code.
 
 ## Parts
 
