@@ -24,6 +24,9 @@ Wheel-legged balancing robot. Two gimbal motors drive the wheels with my own FOC
 
 The full schematic and PCB files are in the repo. The encoders both use address 0x36, so each one is on its own I2C bus.
 It was made in easyEDA.
+[gerber](self-balancing-robot-cat-gerber-v2.0.zip)
+[schematic](schematic.epro2)
+[PCB](PCB.epro2)
 
 ## Things to know
 
@@ -43,13 +46,16 @@ Board v1:
 > **Note:** These v1 issues have all been resolved in the v2 layout included in this repository.
 
 Board v2:
+[gerber](self-balancing-robot-cat-gerber-v2.0.zip)
+[schematic](schematic.epro2)
+[PCB](PCB.epro2)
 - motor 1 IN3 and EN were swapped in my code, so motor 1 only twitched. Took a while to find...
 - SV2 is on GPIO12, not 13
 - encoders were mounted the wrong way and too far from the magnet
 
 ## Software
 
-I don't use the SimpleFOC library. On my board it didn't output any PWM, so I wrote my own FOC using ledcWrite. The servos also use ledcWrite directly instead of ESP32Servo, so they don't fight with the motors over timers.
+I don't use the SimpleFOC library. On my board it didn't output any PWM, so I wrote my own [FOC](Quad-code-ownFOC.zip) using ledcWrite. The servos also use ledcWrite directly instead of ESP32Servo, so they don't fight with the motors over timers.
 
 The control loop runs at a fixed 2 kHz. More about the code later.
 
@@ -69,4 +75,4 @@ You can still make your own robot with this working PCB, you will just need to t
 
 ## License
 
-See [LICENSE.md](LICENSE.md).
+See [LICENSE](LICENSE.md).
