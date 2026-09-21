@@ -20,6 +20,7 @@ Wheel-legged balancing robot. Two gimbal motors drive the wheels with my own FOC
 | 2x 220 µF cap | one on each driver, needed or the ESP32 resets |
 
 ## Schematic and PCB
+<img width="2160" height="1925" alt="image" src="https://github.com/user-attachments/assets/1bbf493b-a859-4a68-800b-6bd59aa50618" />
 
 The full schematic and PCB files are in the repo. The encoders both use address 0x36, so each one is on its own I2C bus.
 It was made in easyEDA.
