@@ -40,7 +40,7 @@ Board v1:
 - the two I2C buses were merged, so both encoders answered on 0x36 (couldn't fix)
 - no caps on the drivers, the ESP32 reset during calibration
 - encoder cables crossed and encoder direction inverted (fixed in code)
-!ANYWAY THIS IS FIXED SO YOU SHOULDN'T HAVE THEM! 
+> **Note:** These v1 issues have all been resolved in the v2 layout included in this repository.
 
 Board v2:
 - motor 1 IN3 and EN were swapped in my code, so motor 1 only twitched. Took a while to find...
