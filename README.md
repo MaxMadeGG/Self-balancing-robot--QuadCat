@@ -1,4 +1,4 @@
-# Self-balancing cat robot
+# Self-balancing robot- QuadCat
 
 Wheel-legged balancing robot. Two gimbal motors drive the wheels with my own FOC code, two servos move the legs so it can crouch, and an MPU-6050 is used for balancing.
 
@@ -20,31 +20,9 @@ Still work in progress. For now this is mostly the electronics and PCB, the rest
 | Buck converter | 5 V for the ESP32 and servos |
 | 2x 220 µF cap | one on each driver, needed or the ESP32 resets |
 
-## Pinout (board v2)
+## Schematic and PCB
 
-Checked with a multimeter on the real board. Some pins were different from what I first wrote down, so check again if you use another board.
-
-**Motors**
-
-| | IN1 | IN2 | IN3 | EN |
-|---|---|---|---|---|
-| Motor 1 | 16 | 17 | 18 | 5 |
-| Motor 2 | 25 | 26 | 14 | 27 |
-
-**I2C**
-
-| Bus | SDA | SCL | Devices |
-|---|---|---|---|
-| 0 | 21 | 19 | encoder motor 1, MPU, lasers |
-| 1 | 22 | 23 | encoder motor 2 |
-
-Both encoders use 0x36, so they have to be on separate buses.
-
-**Other**
-
-- Servos: SV1 on 33, SV2 on 12
-- Laser XSHUT: 32 and 4 (not checked yet)
-- Battery: GPIO35, 100k/22k divider, multiply the reading by 5.545
+The full schematic and PCB files are in the repo. The encoders both use address 0x36, so each one is on its own I2C bus.
 
 ## Things to know
 
@@ -61,6 +39,7 @@ Board v1:
 - the two I2C buses were merged, so both encoders answered on 0x36 (couldn't fix)
 - no caps on the drivers, the ESP32 reset during calibration
 - encoder cables crossed and encoder direction inverted (fixed in code)
+!ANYWAY THIS IS FIXED SO YOU SHOULDN'T HAVE THEM! 
 
 Board v2:
 - motor 1 IN3 and EN were swapped in my code, so motor 1 only twitched. Took a while to find...
@@ -79,8 +58,14 @@ The control loop runs at a fixed 2 kHz. More about the code later.
 - [ ] test the lasers and battery reading
 - [ ] finish the body
 - [ ] balance loop
-- [ ] ESP-NOW remote
+- [ ] ESP-NOW remote - connect to Kode dot and the Pinetime watch to control the robot by yourself
+- [ ] make the robot autonomous
 
 ## Mechanical
 
-Coming later.
+Coming later...
+You can still make your own robot with this working PCB, you will just need to tune the code (me i can't due to the ESP32 that broke)
+
+## License
+
+See [LICENSE](LICENSE).
