@@ -23,6 +23,7 @@ Still work in progress. For now this is mostly the electronics and PCB, the rest
 ## Schematic and PCB
 
 The full schematic and PCB files are in the repo. The encoders both use address 0x36, so each one is on its own I2C bus.
+It was made in easyEDA.
 
 ## Things to know
 
