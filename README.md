@@ -68,4 +68,4 @@ You can still make your own robot with this working PCB, you will just need to t
 
 ## License
 
-See [LICENSE](LICENSE).
+See [LICENSE.md](LICENSE.md).
